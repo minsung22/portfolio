@@ -163,7 +163,7 @@ window.addEventListener('DOMContentLoaded',function(){
         worksPop.classList.remove('active');
         popup1.classList.remove('active');
         bgPop.classList.remove('active');
-        popImg1.classList.add('active');
+        popImg1.classList.remove('active');
         $('.works').hide();
     }
     function funburgerX2(e){
@@ -173,7 +173,7 @@ window.addEventListener('DOMContentLoaded',function(){
         aboutPop.classList.remove('active');
         popup2.classList.remove('active');
         bg2Pop.classList.remove('active');
-        popImg2.classList.add('active');
+        popImg2.classList.remove('active');
         $('.About-me').hide();
     }
     function funburgerX3(e){
@@ -183,7 +183,7 @@ window.addEventListener('DOMContentLoaded',function(){
         contactPop.classList.remove('active');
         popup3.classList.remove('active');
         bgPop.classList.remove('active');
-        popImg3.classList.add('active');
+        popImg3.classList.remove('active');
         $('.contact-me').hide();
         
     }
