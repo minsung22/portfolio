@@ -5,6 +5,8 @@ window.addEventListener('DOMContentLoaded',function(){
     var move = 0;
     var upMove = 0;
     var indiMove = 0;
+    var bgPop = document.querySelector('.bg');
+    var bg2Pop = document.querySelector('.bg2');
 
     var prev = document.querySelector('.prev');
     var next = document.querySelector('.next');
@@ -86,6 +88,7 @@ window.addEventListener('DOMContentLoaded',function(){
     var popup2 = document.querySelector('.About-me .a-title h2')
     var contactPop = document.querySelector('.contact-me');
     var popup3 = document.querySelector('.contact-me .c-title .title h2')
+    
 
     for(var i=0;i<whiteWEl.length;i++){
             whiteWEl[0].addEventListener('click',funTab);
@@ -93,6 +96,8 @@ window.addEventListener('DOMContentLoaded',function(){
             whiteWEl[2].addEventListener('click',funTab3);
     }
     //works
+    var imgScale = document.querySelectorAll('.slide-box .slide');
+
     function funTab(e){
         e.preventDefault();
         $('.works').show();
@@ -101,6 +106,9 @@ window.addEventListener('DOMContentLoaded',function(){
             worksPop.classList.add('active')
             popup1.classList.add('active');
         },10);
+
+        bgPop.classList.add('active');
+
     }
     //about me
     function funTab2(e){
@@ -111,6 +119,8 @@ window.addEventListener('DOMContentLoaded',function(){
             aboutPop.classList.add('active')
             popup2.classList.add('active');
         },10);
+
+        bg2Pop.classList.add('active');
     }
     //contact me
     function funTab3(e){
@@ -121,6 +131,8 @@ window.addEventListener('DOMContentLoaded',function(){
             contactPop.classList.add('active')
             popup3.classList.add('active');
         },10);
+
+        bg2Pop.classList.add('active');
     }
 
 // X누르면 팝업내려가게
@@ -132,13 +144,13 @@ window.addEventListener('DOMContentLoaded',function(){
         burgerX1.addEventListener('click',funburgerX1)
         burgerX2.addEventListener('click',funburgerX2)
         burgerX3.addEventListener('click',funburgerX3)
-    
+        
     function funburgerX1(e){
         e.preventDefault();
     
         worksPop.classList.remove('active');
         popup1.classList.remove('active');
-        
+        bgPop.classList.remove('active');
         $('.works').hide();
     }
     function funburgerX2(e){
@@ -146,7 +158,7 @@ window.addEventListener('DOMContentLoaded',function(){
     
         aboutPop.classList.remove('active');
         popup2.classList.remove('active');
-        
+        bg2Pop.classList.remove('active');
         $('.About-me').hide();
     }
     function funburgerX3(e){
@@ -154,66 +166,68 @@ window.addEventListener('DOMContentLoaded',function(){
     
         contactPop.classList.remove('active');
         popup3.classList.remove('active');
-        
+        bg2Pop.classList.remove('active');
         $('.contact-me').hide();
     }
 
 //About me 컨텐츠들 나타나게
 var jsIcon = document.querySelector('.greeting .icon');
-var jsTop = jsIcon.offsetTop;
 var nameTit = document.querySelector('.greeting .name_tit');
-var nameTop = nameTit.offsetTop;
 var subTit = document.querySelector('.sub_pun_content .sub_title');
-var subTop = subTit.offsetTop;
 var subList = document.querySelector('.sub_pun_content .sub_list');
 var myInfo = document.querySelector('.container .my_info .clfix');
-var infoTop = myInfo.offsetTop;
 var graph = document.querySelector('.my_skill .graph');
-var graphTop = graph.offsetTop;
 var skillTxt = document.querySelector('.my_skill .skill_txt');
 var home = document.querySelector('.home h2');
-var homeTop = home.offsetTop;
-
 var winH = window.innerHeight/5;
+
 aboutPop.addEventListener('scroll',aboutScroll);
 
 function aboutScroll(e){
+    var jsTop = jsIcon.offsetTop;
+    var nameTop = nameTit.offsetTop;
+    var subTop = subTit.offsetTop;
+    var infoTop = myInfo.offsetTop;
+    var graphTop = graph.offsetTop;
+    var homeTop = home.offsetTop;
+
     var scrollY = $('.About-me').scrollTop();
+        console.log(scrollY);
     
-        if(scrollY >= jsTop + winH){
+        if(scrollY +969 >= jsTop + winH){
             jsIcon.classList.add('active'); 
         }
-        if(scrollY >= nameTop + winH + 200){
+        if(scrollY + 969 >= nameTop + winH){
             nameTit.classList.add('active');
         }
-        if(scrollY >= subTop + winH + 100){
+        if(scrollY + 969 >= subTop + winH){
             subTit.classList.add('active');
         }
         setTimeout(function(){
-            if(scrollY >= subTop + winH + 200){
+            if(scrollY + 969 >= subTop + winH){
                 subList.classList.add('active');
             }
         },800);
         setTimeout(function(){
-            if(scrollY >= infoTop + winH){
+            if(scrollY + 969 >= infoTop + winH){
                 myInfo.classList.add('active');
             }
             setTimeout(function(){
-                if(scrollY >= graphTop + winH){
+                if(scrollY + 969 >= graphTop + winH){
                     graph.classList.add('active');
                 }
-            },800);
+            },300);
             setTimeout(function(){
-                if(scrollY >= graphTop + winH + 200){
+                if(scrollY + 969 >= graphTop + winH){
                     skillTxt.classList.add('active');
                 }
                 setTimeout(function(){
-                    if(scrollY >= homeTop + 100){
+                    if(scrollY + 969 >= homeTop){
                         home.classList.add('active');
                     }
-                },1000);
-            },800);
-        },800);
+                },400);
+            },400);
+        },400);
 }
 
 // Contact me 컨텐츠들 나오게
