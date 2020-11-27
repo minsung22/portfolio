@@ -590,7 +590,7 @@ label.invisible{*position:Absolute;}
 .my_info li{float:left;width:25%;text-align:center;}
 .my_info li dt{font-size:23px;color:#fff;position:relative;font-weight:bold;padding-bottom:10px;}
 .my_info li dt:after{content:'';width:15px;height:1px;position:absolute;background:#fff;bottom:0;left:50%;transform:translate(-50%);}
-.my_info li dd{font-size:18px;color:#fff;position:relative;margin-top:}
+.my_info li dd{font-size:18px;color:#fff;position:relative; margin:.5vw auto 0 auto;}
 .my_skill .graph, .my_skill .skill_txt{width:50%;float:left;}
 .my_skill .graph{
     opacity:0;

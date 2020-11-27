@@ -240,33 +240,34 @@ var cLocation = document.querySelector('.cLocation');
 var cEmail = document.querySelector('.cEmail');
 var cPhone = document.querySelector('.cPhone');
 var snsAdrs = document.querySelector('.sns-adress');
-var snsTop = snsAdrs.offsetTop;
 
-setTimeout(function(){
-    cList.forEach(function(cn,idx){
-        cListArr.push(cn.offsetTop);
-    });
-},500);
+
+
 
 var winH = window.innerHeight/5;
     contactPop.addEventListener('scroll',function(){
-    
-        var scrollY = $('.contact-me').scrollTop();
-        console.log(scrollY);
 
-        if(scrollY >= cListArr[0] + winH){
+    
+        cList.forEach(function(cn,idx){
+            cListArr.push(cn.offsetTop);
+        });
+
+        var snsTop = snsAdrs.offsetTop;
+        var scrollY = $('.contact-me').scrollTop();
+
+        if(scrollY +969 >= cListArr[0] + winH){
             cName.classList.add('active');
             cLocation.classList.add('active');
         }
-        if(scrollY >= cListArr[1] + winH + 100){
+        if(scrollY +969 >= cListArr[1] + winH + 200){
             cBirth.classList.add('active');
             cEmail.classList.add('active');
         }
-        if(scrollY >= cListArr[2] + winH + 100){
+        if(scrollY +969 >= cListArr[2] + winH +100){
             cAdress.classList.add('active');
             cPhone.classList.add('active');
         }
-        if(scrollY >= snsTop + winH){
+        if(scrollY + 969 >= snsTop + winH){
             snsAdrs.classList.add('active');
         }
 });
