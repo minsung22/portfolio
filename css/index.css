@@ -251,7 +251,7 @@ li{display:inline-block;}
     display:flex; justify-content: space-between; width:100%;
     align-items: flex-start; flex-wrap: wrap; 
     padding:4.5rem 5rem 0 5rem;
-    z-index:10;
+    z-index:99;
 }
 .header2 a{
     display:inline-block;
@@ -337,7 +337,7 @@ li{display:inline-block;}
 
 .w-title{
     width:50%; text-align:center;
-    margin:8.5vw auto 10vw auto;
+    margin:16vw auto 10vw auto;
 }
 .w-title .title h2{
     font-family: 'Stalinist One', cursive;
@@ -421,7 +421,7 @@ li{display:inline-block;}
     display:flex; justify-content: space-between; width:100%;
     align-items: flex-start; flex-wrap: wrap; 
     padding:4.5rem 5rem 0 5rem;
-    z-index:10;
+    z-index:99;
 }
 .header3 a{
     display:inline-block;
@@ -474,15 +474,27 @@ li{display:inline-block;}
     font-size:12px;
 }
 .a-title{
-    width:100%; text-align:center;
+    width:50%; text-align:center;
+    margin:16vw auto 10vw auto;
 }
-.a-title h2{
-    font-size:7rem;
+.a-title .title h2{
+    font-family: 'Stalinist One', cursive;
+    font-size:8.5vw;
+    position:absolute;
+    top:calc(50% - 11rem);
+    left:-1vw;
     color:#fff;
-    font-family:'Stalinist One', cursive;
-    height:700px;
-    line-height: 700px;
-    background:url(/img/aboutme.jpg) no-repeat;
+    transition:2s;
+    transform:translateY(50%);
+    opacity:0;
+}
+.a-title .title h2.active{
+    transform:translateY(0%);
+    opacity:1;
+}
+.a-title img{
+    width:87%;
+    opacity:0.8;
 }
 
 .sub-title{
@@ -532,7 +544,7 @@ label.invisible{*position:Absolute;}
 .sub_visual_txt h2{color: #ffffff; font-size: 55px;  letter-spacing: -2px;line-height:1;z-index: 13;position: relative;}
 .sub_visual_txt p{color: rgba(255,255,255,.05); font-size: 120px;  letter-spacing: -2px;line-height:1;margin-top:-50px;font-weight:bold;}
 
-.section01 .greeting{padding:165px 0 300px;}
+.section01 .greeting{padding:0 0 300px;}
 .section01 .greeting h2{
     color:#fff;
     transform:translateY(-50%);
@@ -730,7 +742,7 @@ label.invisible{*position:Absolute;}
 }
 .c-title{
     width:50%; text-align:center;
-    margin:8.5vw auto 10vw auto;
+    margin:16vw auto 10vw auto;
 }
 .c-title .title h2{
     font-family: 'Stalinist One', cursive;
@@ -739,6 +751,13 @@ label.invisible{*position:Absolute;}
     top:calc(50% - 8.25rem);
     left:-2vw;
     color:#fff;
+    transition:2s;
+    transform:translateY(50%);
+    opacity:0;
+}
+.c-title .title h2.active{
+    transform:translateY(0%);
+    opacity:1;
 }
 .c-title img{
     width:87%;
