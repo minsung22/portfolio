@@ -187,6 +187,12 @@ window.addEventListener('DOMContentLoaded',function(){
         $('.contact-me').hide();
         
     }
+//work 컨텐츠들 나타나게
+
+
+
+
+
 
 //About me 컨텐츠들 나타나게
 var jsIcon = document.querySelector('.greeting .icon');
