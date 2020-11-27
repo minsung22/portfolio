@@ -88,7 +88,9 @@ window.addEventListener('DOMContentLoaded',function(){
     var popup2 = document.querySelector('.About-me .a-title h2')
     var contactPop = document.querySelector('.contact-me');
     var popup3 = document.querySelector('.contact-me .c-title .title h2')
-    
+    var popImg1 = document.querySelector('.w-title img');
+    var popImg2 = document.querySelector('.a-title img');
+    var popImg3 = document.querySelector('.c-title img');
 
     for(var i=0;i<whiteWEl.length;i++){
             whiteWEl[0].addEventListener('click',funTab);
@@ -106,6 +108,9 @@ window.addEventListener('DOMContentLoaded',function(){
             worksPop.classList.add('active')
             popup1.classList.add('active');
         },10);
+        setTimeout(function(){ 
+            popImg1.classList.add('active');
+        },1000);
 
         bgPop.classList.add('active');
 
@@ -119,6 +124,9 @@ window.addEventListener('DOMContentLoaded',function(){
             aboutPop.classList.add('active')
             popup2.classList.add('active');
         },10);
+        setTimeout(function(){ 
+            popImg2.classList.add('active');
+        },1000);
 
         bg2Pop.classList.add('active');
     }
@@ -131,8 +139,11 @@ window.addEventListener('DOMContentLoaded',function(){
             contactPop.classList.add('active')
             popup3.classList.add('active');
         },10);
+        setTimeout(function(){ 
+            popImg3.classList.add('active');
+        },1000);
 
-        bg2Pop.classList.add('active');
+        bgPop.classList.add('active');
     }
 
 // X누르면 팝업내려가게
@@ -147,27 +158,34 @@ window.addEventListener('DOMContentLoaded',function(){
         
     function funburgerX1(e){
         e.preventDefault();
-    
+        
+        worksPop.scrollTo(0,0);
         worksPop.classList.remove('active');
         popup1.classList.remove('active');
         bgPop.classList.remove('active');
+        popImg1.classList.add('active');
         $('.works').hide();
     }
     function funburgerX2(e){
         e.preventDefault();
-    
+        
+        aboutPop.scrollTo(0,0);
         aboutPop.classList.remove('active');
         popup2.classList.remove('active');
         bg2Pop.classList.remove('active');
+        popImg2.classList.add('active');
         $('.About-me').hide();
     }
     function funburgerX3(e){
         e.preventDefault();
-    
+        
+        contactPop.scrollTo(0,0);
         contactPop.classList.remove('active');
         popup3.classList.remove('active');
-        bg2Pop.classList.remove('active');
+        bgPop.classList.remove('active');
+        popImg3.classList.add('active');
         $('.contact-me').hide();
+        
     }
 
 //About me 컨텐츠들 나타나게

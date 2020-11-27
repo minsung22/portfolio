@@ -337,7 +337,7 @@ li{display:inline-block;}
 
 .w-title{
     width:50%; text-align:center;
-    margin:16vw auto 10vw auto;
+    margin:10.1vw auto 10vw auto;
 }
 .w-title .title h2{
     font-family: 'Stalinist One', cursive;
@@ -345,7 +345,7 @@ li{display:inline-block;}
     position:absolute;
     top:calc(50% - 5.5rem);
     left:-1vw;
-    transition:2s;
+    transition:2s ease-in;
     transform:translateY(70%);
     opacity:0;
 }
@@ -354,8 +354,12 @@ li{display:inline-block;}
     opacity:1;
 }
 .w-title img{
-    width:43.5vw;
+    width:50vw;
     opacity:0.8;
+    transition:1s;
+}
+.w-title img.active{
+    transform:scale(.85);
 }
 
 
@@ -475,7 +479,7 @@ li{display:inline-block;}
 }
 .a-title{
     width:50%; text-align:center;
-    margin:16vw auto 10vw auto;
+    margin:10.1vw auto 10vw auto;
 }
 .a-title .title h2{
     font-family: 'Stalinist One', cursive;
@@ -493,8 +497,12 @@ li{display:inline-block;}
     opacity:1;
 }
 .a-title img{
-    width:87%;
+    width:50vw;
     opacity:0.8;
+    transition:1s;
+}
+.a-title img.active{
+    transform:scale(.85);
 }
 
 .sub-title{
@@ -736,13 +744,72 @@ label.invisible{*position:Absolute;}
 
 /* --------------Contact me-------------- */
 
-
+.popupB.active{
+    opacity:1;
+}
+.contact-me .header3{
+    display:flex; justify-content: space-between; width:100%;
+    align-items: flex-start; flex-wrap: wrap; 
+    padding:4.5rem 5rem 0 5rem;
+    z-index:99;
+}
+.contact-me .header3 a{
+    display:inline-block;
+    width:25px;
+    height:20px;
+    position:relative;
+}
+.contact-me .header3 a span:nth-of-type(1){
+    display:inline-block;
+    width:100%;
+    height:1px;
+    background:#000;
+    position:absolute;
+    transition:.5s;
+    top:0;
+    left:0;
+}
+.contact-me .header3 a span:nth-of-type(2){
+    display:inline-block;
+    width:100%;
+    height:1px;
+    background:#000;
+    position:absolute;
+    transition:.5s;
+    top:50%;
+    left:0;
+}
+.contact-me .header3 a span:nth-of-type(3){
+    display:inline-block;
+    width:100%;
+    height:1px;
+    background:#000;
+    position:absolute;
+    transition:.5s;
+    bottom:0;
+    left:0;
+}
+.contact-me .header3 .side div{
+    margin-left:20px;
+}
+.contact-me .header3 .side div a{
+    cursor: pointer;
+}
+.contact-me .header3 h1{
+    margin-right:65px;
+    font-size:2em;
+}
+.contact-me .header3 div span{
+    font-family: 'Stalinist One', cursive;
+    font-size:12px;
+    color:black;
+}
 .contact-me .header3{
     padding-bottom:0;
 }
 .c-title{
     width:50%; text-align:center;
-    margin:16vw auto 10vw auto;
+    margin:10.1vw auto 10vw auto;
 }
 .c-title .title h2{
     font-family: 'Stalinist One', cursive;
@@ -750,7 +817,7 @@ label.invisible{*position:Absolute;}
     position:absolute;
     top:calc(50% - 8.25rem);
     left:-2vw;
-    color:#fff;
+    color:#000;
     transition:2s;
     transform:translateY(50%);
     opacity:0;
@@ -760,8 +827,12 @@ label.invisible{*position:Absolute;}
     opacity:1;
 }
 .c-title img{
-    width:87%;
+    width:50vw;
     opacity:0.8;
+    transition:1s;
+}
+.c-title img.active{
+    transform:scale(.85);
 }
 .c-box{
     width:60%;
@@ -794,7 +865,7 @@ label.invisible{*position:Absolute;}
     margin-top:6vw;
 } */
 .c-list p{
-    color:#fff;
+    color:#000;
     font-family:'Gugi', cursive;
     font-size:2vw;
     text-align:start;
@@ -812,12 +883,12 @@ label.invisible{*position:Absolute;}
     transition:3s;
 }
 .sns-adress p{
-    color:#fff;
+    color:#000;
     font-family:'Gugi', cursive;
     font-size:1.5vw;
 }
 .sns-adress a{
-    color:#fff;
+    color:#000;
     font-family:'Gugi', cursive;
     font-size:2vw;
 }
