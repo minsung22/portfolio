@@ -225,7 +225,7 @@ function aboutScroll(e){
                     if(scrollY + 969 >= homeTop){
                         home.classList.add('active');
                     }
-                },400);
+                },300);
             },400);
         },400);
 }

@@ -8,13 +8,14 @@
     display:flex; justify-content: space-between; width:100%;
     align-items: flex-start; flex-wrap: wrap; 
     padding:4.5rem 5rem 0 5rem;
-    z-index:10;
+    z-index:15;
 }
 .header a{
     display:inline-block;
     width:25px;
     height:20px;
     position:relative;
+    cursor: pointer;
 }
 .header a span:nth-of-type(1){
     display:inline-block;
@@ -135,12 +136,16 @@ li{display:inline-block;}
     padding-bottom:1rem;
     padding-top:1rem;
     font-family: 'Stalinist One', cursive;
+    
+}
+.menu-white .menu-item-title{
+    cursor: pointer;
 }
 .clr-white{
     color:hsla(0,0%,100%,.1);
 }
 .white{color:#fff;}
-.menu-white{cursor:grab}
+.menu-white{}
 .menu-space{
     visibility:hidden;
     font-size:6vw;
@@ -253,6 +258,7 @@ li{display:inline-block;}
     width:25px;
     height:20px;
     position:relative;
+    cursor: pointer;
 }
 .header2 a span:nth-of-type(1){
     display:inline-block;
@@ -414,7 +420,7 @@ li{display:inline-block;}
 .header3{
     display:flex; justify-content: space-between; width:100%;
     align-items: flex-start; flex-wrap: wrap; 
-    padding:4.5rem 5rem 8.5vw 5rem;
+    padding:4.5rem 5rem 0 5rem;
     z-index:10;
 }
 .header3 a{
@@ -455,6 +461,9 @@ li{display:inline-block;}
 }
 .header3 .side div{
     margin-left:20px;
+}
+.header3 .side div a{
+    cursor: pointer;
 }
 .header3 h1{
     margin-right:65px;
