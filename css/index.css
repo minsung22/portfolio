@@ -73,7 +73,7 @@
     margin-left:12.5vw;
 }
 
-.slide-box .slider-inner .slide:hover a img:nth-last-of-type(2){
+.slide-box .slider-inner .slide:hover a img{
     transform:scale(1.1);
 }
 
@@ -84,7 +84,7 @@ main{}
 li{display:inline-block;}
 
 .slide-box img{
-    opacity:1;
+    opacity:.8;
     width:50vw;
 }
 .bg{
@@ -713,7 +713,7 @@ label.invisible{*position:Absolute;}
 /* --------------Contact me-------------- */
 
 .contact-me{
-    display:none;
+    /* display:none; */
 }
 .contact-me .header3{
     padding-bottom:0;
@@ -778,6 +778,9 @@ label.invisible{*position:Absolute;}
 .sns-adress{
     text-align:center;
     margin-top:6vw;
+    transform: translateX(-50%) translateY(-50%);
+    opacity:0;
+    transition:3s;
 }
 .sns-adress p{
     color:#fff;
@@ -788,6 +791,20 @@ label.invisible{*position:Absolute;}
     color:#fff;
     font-family:'Gugi', cursive;
     font-size:2vw;
+}
+
+.sns-adress.active{
+        transform: translateX(-50%) translateY(-50%);
+        z-index:9;
+        animation:snsAni 3s forwards;
+        opacity:1;
+}
+
+@keyframes snsAni{
+    0%{transform: translateX(-50%) translateY(-50%);}
+    25%{transform: translateX(-35%) translateY(0%);}
+    50%{transform: translateX(-15%) translateY(-50%);}
+    100%{transform: translateX(0%) translateY(0%);}
 }
 
 footer{

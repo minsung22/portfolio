@@ -164,6 +164,8 @@ var cAdress = document.querySelector('.cAdress');
 var cLocation = document.querySelector('.cLocation');
 var cEmail = document.querySelector('.cEmail');
 var cPhone = document.querySelector('.cPhone');
+var snsAdrs = document.querySelector('.sns-adress');
+var snsTop = snsAdrs.offsetTop;
 
 setTimeout(function(){
     cList.forEach(function(cn,idx){
@@ -179,13 +181,16 @@ var winH = window.innerHeight/5;
             cName.classList.add('active');
             cLocation.classList.add('active');
         }
-        if(window.scrollY >= cListArr[1] + winH){
+        if(window.scrollY >= cListArr[1] + winH + 100){
             cBirth.classList.add('active');
             cEmail.classList.add('active');
         }
-        if(window.scrollY >= cListArr[2] + winH){
+        if(window.scrollY >= cListArr[2] + winH + 100){
             cAdress.classList.add('active');
             cPhone.classList.add('active');
+        }
+        if(window.scrollY >= snsTop + winH){
+            snsAdrs.classList.add('active');
         }
 });
 
