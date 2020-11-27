@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+html{margin:0; line-height: 1.15;}
+body{margin:0;}
+ul{margin:0; padding:0; list-style:none;}
+li{
+    list-style:none;
+}
+a{
+    text-decoration: none;
+}
+*{box-sizing: border-box;
+    -ms-overflow-style:none;
+}
+*::-webkit-scrollbar{display:none;}
+h1{margin:0;}
+div{
+    margin:0;
+    letter-spacing: -.025em;
+}
+span{color:#fff;}
+h2{margin:0;}
+article{margin:0;}
+
+
+.black{background: #0d0d0d;}
+.x{width:100%;}
+.y{height:100%;}
+.fix{position:fixed;}
+.fill{top:0; left:0;}
+.top{top:0;}
+.left{left:0;}
+.usn{user-select:none;}
+.abs{position: absolute;}
+.rel{position:relative;}
+.flx{display:flex;}
+.z2{z-index:2;}
+.z10{z-index:10;}
+.oh{overflow:hidden;}
+.fLeft{
+    float:left;
+}
+.fRight{
+    float:right;
+}
+.w50{
+    width:50%;
+}
+.cb{color:#000;}

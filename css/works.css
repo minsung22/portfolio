@@ -1,0 +1,76 @@
+@import url('common.css');
+
+table {border-collapse:collapse; border-spacing:0;}
+address,caption,cite,code,dfn,em,var {font-style:normal; font-weight:normal;}
+summary, caption, legend{width:0; height:0; font-size: ; line-height: ; overflow: hidden; visibility: hidden; border: none; position:absolute; left:-1000em;}
+caption {position:static;}
+/* label hidden ÃƒÂ³Â¸Â® */
+.invisible{overflow:hidden; visibility:hidden; width:0; height:0; font-size:0; line-height:0; position:absolute;}
+label.invisible{*position:Absolute;}
+
+
+.header2{
+    display:flex; justify-content: space-between; width:100%;
+    align-items: center; flex-wrap: wrap; 
+    padding:4.5rem 5rem 4.5rem 5rem;
+    z-index:10;
+    background:#fff;
+}
+.header2 div span{
+    font-family: 'Stalinist One', cursive;
+    font-size:12px;
+    color:#000;
+}
+
+.burgerX{
+    display:inline-block;
+    width:25px;
+    height:25px;
+}
+.burger{
+    width:1.2%;
+    height:1.2%;
+}
+.burger-line--1 {
+    -webkit-transform: translateX(-50%) translateY(-.1em) rotate(-45deg);
+    transform: translateX(-50%) translateY(-.1em) rotate(-45deg);
+}
+.burger-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: .075em;
+    min-height: 2px;
+}
+.burger-line--2 {
+    -webkit-transform: translateX(-50%) translateY(-.1em) rotate(45deg);
+    transform: translateX(-50%) translateY(-.1em) rotate(45deg);
+}
+.bg-black {
+    background-color: #000;
+}
+
+.sub_wrap{
+    
+}
+.sub_visual_wrap li p{
+    position:relative;
+    height:700px;
+    background-size:cover;
+}
+.sub_visual_txt{
+    position: absolute;
+    top:50%;
+    left:0;
+    width:100%;
+    text-align:center;
+    font-family:'Gugi', cursive;
+}
+.sub_visual_txt h2{
+    color:#fff;
+    font-size:6vw;
+    position:relative;
+}
+
+
