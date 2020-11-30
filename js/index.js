@@ -91,7 +91,10 @@ window.addEventListener('DOMContentLoaded',function(){
     var popImg1 = document.querySelector('.w-title img');
     var popImg2 = document.querySelector('.a-title img');
     var popImg3 = document.querySelector('.c-title img');
+    var nextAbout = document.querySelector('.works .nextP');
 
+
+    
     for(var i=0;i<whiteWEl.length;i++){
             whiteWEl[0].addEventListener('click',funTab);
             whiteWEl[1].addEventListener('click',funTab2);
@@ -116,6 +119,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
     }
     //about me
+    
     function funTab2(e){
         e.preventDefault();
         $('.About-me').show();
@@ -130,6 +134,34 @@ window.addEventListener('DOMContentLoaded',function(){
 
         bg2Pop.classList.add('active');
     }
+
+// work에서 넥스트눌렀을때
+    nextAbout.addEventListener('click',nextPAbout);
+    function nextPAbout(e){
+        e.preventDefault();
+        $('.About-me').show();
+
+        setTimeout(function(){ 
+            aboutPop.classList.add('active')
+            popup2.classList.add('active');
+        },10);
+        setTimeout(function(){ 
+            popImg2.classList.add('active');
+        },1000);
+
+        bg2Pop.classList.add('active');
+
+        worksPop.scrollTo(0,0);
+        worksPop.classList.remove('active');
+        popup1.classList.remove('active');
+        bgPop.classList.remove('active');
+        popImg1.classList.remove('active');
+        for(var i=0;i<workItem.length;i++){
+            workItem[i].classList.remove('active');
+        }
+        $('.works').hide();
+    }
+
     //contact me
     function funTab3(e){
         e.preventDefault();
@@ -167,6 +199,7 @@ window.addEventListener('DOMContentLoaded',function(){
         for(var i=0;i<workItem.length;i++){
             workItem[i].classList.remove('active');
         }
+        
         $('.works').hide();
     }
     function funburgerX2(e){
@@ -198,7 +231,6 @@ worksPop.addEventListener('scroll',workScroll);
 
 function workScroll(){
     var scrollYY = $('.works').scrollTop();
-    console.log(workItem[0].offsetTop)    
         for(var i=0;i<workItem.length;i++){
            
             if(scrollYY > workItem[i].offsetTop - window.innerHeight){
@@ -223,6 +255,8 @@ var graph = document.querySelector('.my_skill .graph');
 var skillTxt = document.querySelector('.my_skill .skill_txt');
 var home = document.querySelector('.home h2');
 var winH = window.innerHeight/5;
+
+
 
 aboutPop.addEventListener('scroll',aboutScroll);
 
