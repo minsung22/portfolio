@@ -188,8 +188,18 @@ window.addEventListener('DOMContentLoaded',function(){
         
     }
 //work 컨텐츠들 나타나게
+var workItem = document.querySelectorAll('.work-item');
 
 
+worksPop.addEventListener('scroll',workScroll);
+
+function workScroll(){
+    workItem.forEach(function(){
+
+    })
+
+    
+}
 
 
 
