@@ -87,7 +87,7 @@ li{display:inline-block;}
 .slide-box img{
     opacity:.8;
     width:50vw;
-    filter:blur(1px);
+    filter:blur(1.1px);
 }
 .bg{
     width:100%; height:100%;
