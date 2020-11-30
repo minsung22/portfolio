@@ -164,6 +164,9 @@ window.addEventListener('DOMContentLoaded',function(){
         popup1.classList.remove('active');
         bgPop.classList.remove('active');
         popImg1.classList.remove('active');
+        for(var i=0;i<workItem.length;i++){
+            workItem[i].classList.remove('active');
+        }
         $('.works').hide();
     }
     function funburgerX2(e){
@@ -188,15 +191,21 @@ window.addEventListener('DOMContentLoaded',function(){
         
     }
 //work 컨텐츠들 나타나게
-var workItem = document.querySelectorAll('.work-item');
+var workItem = document.querySelectorAll('.work-list .work-item');
 
 
 worksPop.addEventListener('scroll',workScroll);
 
 function workScroll(){
-    workItem.forEach(function(){
-
-    })
+    var scrollYY = $('.works').scrollTop();
+    console.log(workItem[0].offsetTop)    
+        for(var i=0;i<workItem.length;i++){
+           
+            if(scrollYY > workItem[i].offsetTop - window.innerHeight){
+                workItem[i].classList.add('active');
+            }
+            
+        }
 
     
 }

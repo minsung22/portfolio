@@ -374,6 +374,18 @@ li{display:inline-block;}
 .work-list .work-item{
     position:relative;
 }
+.work-list .work-item:nth-of-type(1).active{
+    transform:translateY(-20%);
+    transition:3s;
+}
+.work-list .work-item:nth-of-type(2).active{
+    transform:translateY(-20%);
+    transition:2s
+}
+.work-list .work-item:nth-of-type(3).active{
+    transform:translateY(-20%);
+    transition:1s;
+}
 .work-list h2{
     font-size:6vw;
     font-family: 'Gugi', cursive;
@@ -398,6 +410,7 @@ li{display:inline-block;}
     position: relative;
     margin-top:10vw;
     padding-bottom:10vw;
+    transform:translateY(-20%);
 }
 .nextP a{
     font-family:'Stalinist One', cursive; 
