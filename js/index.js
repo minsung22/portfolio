@@ -210,6 +210,15 @@ window.addEventListener('DOMContentLoaded',function(){
         popup2.classList.remove('active');
         bg2Pop.classList.remove('active');
         popImg2.classList.remove('active');
+
+        jsIcon.classList.remove('active'); 
+        nameTit.classList.remove('active');
+        subTit.classList.remove('active');
+        subList.classList.remove('active');
+        myInfo.classList.remove('active');
+        graph.classList.remove('active');
+        skillTxt.classList.remove('active');
+        home.classList.remove('active');
         $('.About-me').hide();
     }
     function funburgerX3(e){
@@ -220,6 +229,14 @@ window.addEventListener('DOMContentLoaded',function(){
         popup3.classList.remove('active');
         bgPop.classList.remove('active');
         popImg3.classList.remove('active');
+
+        cName.classList.remove('active');
+        cLocation.classList.remove('active');
+        cBirth.classList.remove('active');
+        cEmail.classList.remove('active');
+        cAdress.classList.remove('active');
+        cPhone.classList.remove('active');
+        snsAdrs.classList.remove('active');
         $('.contact-me').hide();
         
     }
