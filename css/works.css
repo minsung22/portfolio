@@ -9,22 +9,69 @@ caption {position:static;}
 label.invisible{*position:Absolute;}
 
 
-.header2{
+.header3{
     display:flex; justify-content: space-between; width:100%;
-    align-items: center; flex-wrap: wrap; 
-    padding:4.5rem 5rem 4.5rem 5rem;
-    z-index:10;
-    background:#fff;
+    align-items: flex-start; flex-wrap: wrap; 
+    padding:4.5rem 5rem 0 5rem;
+    z-index:99;
 }
-.header2 div span{
-    font-family: 'Stalinist One', cursive;
-    font-size:12px;
-    color:#000;
-}
-
-.burgerX{
+.header3 a{
     display:inline-block;
     width:25px;
+    height:20px;
+    position:relative;
+}
+.header3 a span:nth-of-type(1){
+    display:inline-block;
+    width:100%;
+    height:1px;
+    background:#000;
+    position:absolute;
+    transition:.5s;
+    top:0;
+    left:0;
+}
+.header3 a span:nth-of-type(2){
+    display:inline-block;
+    width:100%;
+    height:1px;
+    background:#000;
+    position:absolute;
+    transition:.5s;
+    top:50%;
+    left:0;
+}
+.header3 a span:nth-of-type(3){
+    display:inline-block;
+    width:100%;
+    height:1px;
+    background:#000;
+    position:absolute;
+    transition:.5s;
+    bottom:0;
+    left:0;
+}
+.header3 .side div{
+    margin-left:20px;
+}
+.header3 .side div a{
+    cursor: pointer;
+}
+.header3 h1{
+    margin-right:65px;
+    font-size:2em;
+}
+.header3 div span{
+    font-family: 'Stalinist One', cursive;
+    font-size:12px;
+    color:black;
+}
+.header3{
+    padding-bottom:0;
+}
+.burgerX{
+    display:inline-block;
+    width:35px !important;
     height:25px;
 }
 .burger{
@@ -47,16 +94,28 @@ label.invisible{*position:Absolute;}
     -webkit-transform: translateX(-50%) translateY(-.1em) rotate(45deg);
     transform: translateX(-50%) translateY(-.1em) rotate(45deg);
 }
+.header3 div span{
+    font-family: 'Stalinist One', cursive;
+    font-size:12px;
+    color:black;
+}
+.header3 div span img{
+    opacity:0;
+    margin-right:10px;
+}
 .bg-black {
     background-color: #000;
 }
+.bg-white {
+    background-color: #fff;
+}
 
 .sub_wrap{
-    
+    margin-top:7vw;
 }
 .sub_visual_wrap li p{
     position:relative;
-    height:700px;
+    height:36.4583vw;
     background-size:cover;
 }
 .sub_visual_txt{
@@ -73,4 +132,220 @@ label.invisible{*position:Absolute;}
     position:relative;
 }
 
+.view_tit_area{
+    text-align:center;
+}
+.name_tit{
+    font-size:3.1250vw;
+    font-weight:bold;
+    z-index:1;
+    position:relative;
+    text-align:center;
+    line-height:1;
+    margin-top:3.3854vw;
+    transition:all .3s;
+}
+.view_tit_area a{
+    display:inline-block;
+    width:13.8021vw;
+    height:3.3854vw;
+    position:relative;
+    border:2px solid #003abc;
+    margin-top:2.8646vw;
+    line-height:3.13vw;
+    font-size:1.0417vw;
+    color:#003abc;
+}
+.view_tit_area a:after{
+    position:absolute;
+    background:url("/img/view_arrow.png");
+    transition:all .3s;
+    content:'';
+    width:3.3854vw;
+    height:0.9375vw;
+    right:-1.5625vw;
+    top:50%;
+    transform:translate(0,-50%);
+}
+.view_info{
+    margin-top:7.2917vw;
+}
+.view_info ul{
+    text-align:center;
+    display:block;
+    zoom:1;
+}
+.view_info ul:after{
+    content:".";
+    display:block;
+    height:0px;
+    clear:both;
+    visibility:hidden;
+}
+.view_info ul li{
+    font-size:0.9375vw;
+    color:#000;
+    display:inline-block;
+    padding:0 2.3438vw;
+}
+.view_info ul li strong{
+    font-size:1.3021vw;
+    font-weight:bold;
+    margin-right:1.3021vw;
+}
+.skill_chart{
+    text-align: center;
+    margin-top:7.2917vw;
+}
+.skill_chart img{
+    max-width:44.1146vw;
+    width:100%;
+    display:inline-block;
+    vertical-align: top;
+}
+.skill_chart .Mshow{
+    display:none !important;
+}
+.font{
+    margin-top:6.7708vw;
+}
+.font-01, .font-02{
+    display:table;
+    max-width:44.1146vw;
+    margin:0 auto;
+    width:100%;
+}
+.font-01 dl, .font-02 dl{
+    width:60%;
+}
+.font-01 dl, .font-02 dl, .font-sample{
+    display:table-cell;
+    vertical-align:middle;
+}
+.font dl dt{
+    font-size:7.8125vw;
+    color:#003abc;
+    font-weight:bold;
+    line-height:1;
+}
+.font dl dt, .font dl dd{
+    width:45%;
+    display:inline-block;
+    vertical-align:middle;
+}
+.font dl dd strong{
+    display:block;
+    color:#003abc;
+    font-size:1.4583vw;
+    font-weight:bold;
+}
+.font dl dd span{
+    color:#929292;
+    font-size:0.9375vw;
+    display:inline-block;
+}
+.font dl dd span + span{
+    margin-left:0.5208vw;
+}
+.font-01 .font-sample, .font-02 .font-sample{
+    color:#707070;
+    font-size:1.0417vw;
+}
+.font > div + div{margin-top:1.0417vw;}
 
+.color{
+    margin-top:6.7708vw;
+    zoom:1;
+    display:block;
+}
+.color:after{
+    content: ".";
+    display: block;
+    height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+.color ul{
+    display:table;
+    width:100%;
+    max-width:44.2708vw;
+    margin:0 auto;
+}
+.color ul li{
+    display:table-cell;
+    vertical-align:middle;
+    width:33.33%;
+    color:#7d7d7d;
+}
+.color span.bg{
+    width:5.7292vw;
+    height:5.2083vw;
+    display:inline-block;
+    text-align:center;
+    line-height:5.2083vw;
+    color:#fff;
+}
+.color ul li dl{
+    display:inline-block;
+    padding:20px 15px;
+    vertical-align: middle;
+}
+.color dt{
+    color:#2f2524;
+    font-size:1.0417vw;
+    margin-bottom:0.5208vw;
+}
+.color dd{
+    color:#7e7e7e;
+    font-size:0.625vw;
+}
+.view_main_mac{
+    height:54.6875vw;
+    margin-top:8.8542vw;
+    position:relative;
+}
+/* .view_main_mac:after{
+    content:'';
+    height:974px;
+    background-color:#dddddd;
+    position:absolute;
+    bottom:0;
+    width:100%;
+} */
+.view_main_mac p{
+    background:url("img/view_main18.png");
+    position:relative;
+    z-index: 12;
+    max-width:1470px;
+    width:100%;
+    height:1059px;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:contain;
+    margin:0 auto;
+}
+#footer{
+    background:#000;
+    padding:3.9063vw 0;
+    z-index:11;
+    position:relative;
+}
+#footer .container{
+    margin:0 auto;
+    width:80%;
+}
+#footer dl{color:#fff;}
+#footer dt{
+    font-size:0.9375vw;
+    display:block;
+    font-weight:bold;
+}
+#footer dd {
+    font-size: 13px;
+    display: inline-block;
+    margin-top:10px;
+}
+#footer dd a{
+    color:#fff;
+}
+#footer dd + dd {margin-left: 15px;}
