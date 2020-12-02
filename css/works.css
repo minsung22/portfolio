@@ -51,6 +51,9 @@ label.invisible{*position:Absolute;}
     bottom:0;
     left:0;
 }
+.header3 .side{
+    opacity:0;
+}
 .header3 .side div{
     margin-left:20px;
 }
@@ -441,11 +444,13 @@ label.invisible{*position:Absolute;}
     font-size:0.9375vw;
     display:block;
     font-weight:bold;
+    font-family:'Gugi', cursive;
 }
 #footer dd {
     font-size: 13px;
     display: inline-block;
     margin-top:10px;
+    font-family:'Gugi', cursive;
 }
 #footer dd a{
     color:#fff;
