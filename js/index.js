@@ -231,12 +231,17 @@ worksPop.addEventListener('scroll',workScroll);
 
 function workScroll(){
     var scrollYY = $('.works').scrollTop();
+    console.log(scrollYY);
         for(var i=0;i<workItem.length;i++){
            
             if(scrollYY > workItem[i].offsetTop - window.innerHeight){
                 workItem[i].classList.add('active');
+            }else{
+                workItem[i].classList.remove('active');
             }
-            
+            if(scrollYY == 0){
+                workItem[0].classList.remove('active');
+            }
         }
 
     

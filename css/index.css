@@ -373,6 +373,8 @@ li{display:inline-block;}
 }
 .work-list .work-item{
     position:relative;
+    transform:translateY(0);
+    transition:2s;
 }
 .work-list .work-item:nth-of-type(1).active{
     transform:translateY(-20%);
