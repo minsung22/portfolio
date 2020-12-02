@@ -132,6 +132,9 @@ label.invisible{*position:Absolute;}
     position:relative;
 }
 
+.section01 .container{
+    width:80%; margin:0 auto;
+}
 .view_tit_area{
     text-align:center;
 }
