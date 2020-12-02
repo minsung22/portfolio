@@ -135,7 +135,9 @@ label.invisible{*position:Absolute;}
     font-size:6vw;
     position:relative;
 }
-
+.section01 a, .section01 h2, .section01 p, .section01 li, .section01 strong{
+    font-family: 'Gugi', cursive;
+}
 .section01 .container{
     width:80%; margin:0 auto;
 }
@@ -189,6 +191,13 @@ label.invisible{*position:Absolute;}
 }
 .view_info{
     margin-top:7.2917vw;
+    opacity:0;
+    transform:translate3d(0,100px,0);
+    transition:1s;
+}
+.view_info.active{
+    opacity:1;
+    transform:translateZ(0);
 }
 .view_info ul{
     text-align:center;
@@ -207,6 +216,7 @@ label.invisible{*position:Absolute;}
     color:#000;
     display:inline-block;
     padding:0 2.3438vw;
+    margin-top:10px;
 }
 .view_info ul li strong{
     font-size:1.3021vw;
@@ -216,6 +226,13 @@ label.invisible{*position:Absolute;}
 .skill_chart{
     text-align: center;
     margin-top:7.2917vw;
+    transition:1s;
+    transform:translate3d(0,100px,0);
+    opacity:0;
+}
+.skill_chart.active{
+    opacity:1;
+    transform:translateZ(0);
 }
 .skill_chart img{
     max-width:44.1146vw;
@@ -234,6 +251,13 @@ label.invisible{*position:Absolute;}
     max-width:44.1146vw;
     margin:0 auto;
     width:100%;
+    opacity:0;
+    transform:translate3d(-100px,0,0);
+    transition:1s;
+}
+.font-01.active, .font-02.active{
+    opacity:1;
+    transform:translateZ(0);
 }
 .font-01 dl, .font-02 dl{
     width:60%;
@@ -277,6 +301,21 @@ label.invisible{*position:Absolute;}
     margin-top:6.7708vw;
     zoom:1;
     display:block;
+}
+.color .aos-init{
+    transition:1s;
+    opacity:0;
+    transform:translate3d(0,100px,0);
+}
+.color .aos-init.active{
+    opacity:1;
+    transform:translateZ(0);
+}
+.color .aos-init:nth-of-type(2){
+    transition-delay:.2s;
+}
+.color .aos-init:nth-of-type(3){
+    transition-delay:.4s;
 }
 .color:after{
     content: ".";
@@ -323,6 +362,13 @@ label.invisible{*position:Absolute;}
     height:54.6875vw;
     margin-top:8.8542vw;
     position:relative;
+    transition:1s;
+    opacity:0;
+    transform:translate3d(0,100px,0) scale(1.2);
+}
+.view_main_mac.active{
+    opacity:1;
+    transform:translateZ(0) scale(1);
 }
 /* .view_main_mac:after{
     content:'';
@@ -343,6 +389,14 @@ label.invisible{*position:Absolute;}
     background-repeat:no-repeat;
     background-size:contain;
     margin:0 auto;
+}
+
+.fixed_btn{
+    opacity:0;
+    transition:1.5s;
+}
+.fixed_btn.active{
+    opacity:1;
 }
 .fixed_btn a{
     position:fixed;

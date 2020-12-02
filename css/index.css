@@ -393,6 +393,7 @@ li{display:inline-block;}
     position:absolute;
     top:calc(50% - 3vw);
     left:calc(50% - 14vw);
+    cursor: pointer;
 }
 .work-list .work-item:nth-of-type(2) h2{
     left:calc(50% - 25vw);
