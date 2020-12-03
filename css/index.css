@@ -201,7 +201,7 @@ li{display:inline-block;}
     display:flex; width:100%;
     justify-content: space-between;
     align-items: flex-end;
-    cursor: pointer;
+    
 }
 .footer .flx{
     justify-content: space-between;
@@ -209,6 +209,7 @@ li{display:inline-block;}
 }
 .prev-btn{
    display:flex;
+   cursor: pointer;
 }
 .p-SVG{
     margin-right:30px;
@@ -216,7 +217,7 @@ li{display:inline-block;}
 .n-SVG{
     margin-left:30px;
 }
-.next{color:#fff;}
+.next{color:#fff; cursor: pointer;}
 .fix .btn img{
     animation: floatingAnim 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate both;
 }
@@ -396,6 +397,30 @@ li{display:inline-block;}
     top:calc(50% - 3vw);
     left:calc(50% - 14vw);
     cursor: pointer;
+}
+.work-list .work-item:nth-of-type(1) h2:after{
+    content:'바로가기->';
+    display:block;
+    clear:both;
+    font-size:1.5vw;
+    position:absolute;
+    left:calc(50% - 6vw);
+}
+.work-list .work-item:nth-of-type(2) h2:after{
+    content:'바로가기->';
+    display:block;
+    clear:both;
+    font-size:1.5vw;
+    position:absolute;
+    right:calc(50% - 6vw);
+}
+.work-list .work-item:nth-of-type(3) h2:after{
+    content:'바로가기->';
+    display:block;
+    clear:both;
+    font-size:1.5vw;
+    position:absolute;
+    left:calc(50% - 6vw);
 }
 .work-list .work-item:nth-of-type(2) h2{
     left:calc(50% - 25vw);
@@ -672,6 +697,14 @@ label.invisible{*position:Absolute;}
     transform:translateX(0%);
     opacity:1s;
 }
+.About-me .nextP a{
+    color:white;
+}
+.About-me .nextP::before{
+    color:white;
+    left:22vw;
+
+}
 
 
 @media screen and (max-width : 1400px) {
@@ -923,6 +956,10 @@ label.invisible{*position:Absolute;}
     25%{transform: translateX(-35%) translateY(0%);}
     50%{transform: translateX(-15%) translateY(-50%);}
     100%{transform: translateX(0%) translateY(0%);}
+}
+
+.contact-me .nextP:before{
+    left:33.5vw;
 }
 
 footer{

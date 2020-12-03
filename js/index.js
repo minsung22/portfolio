@@ -17,14 +17,16 @@ window.addEventListener('DOMContentLoaded',function(){
     var whiteWEl = document.querySelectorAll('.whiteW .menu-list .rel .menu-item-title');
     var blackW = document.querySelector('.blackW');
 
-
-    
     var slideW = slide[0].offsetWidth + slide[0].offsetLeft;
     var whiteT = whiteWEl[0].offsetHeight + whiteWEl[0].offsetTop;
     var indiT = indi[0].offsetHeight + indi[0].offsetTop;
 //슬라이드 
+
         var aa;
+       
+     
         slide.forEach(function(el, idx){
+            
             contents.addEventListener('mousewheel',function(e){
                 clearTimeout(aa);
                 aa = setTimeout(funWheel,100,e);
@@ -32,6 +34,7 @@ window.addEventListener('DOMContentLoaded',function(){
             
 
             function funWheel(e){
+
                 if(e.wheelDelta < 0){
                     //down
                     move += slideW;
@@ -47,9 +50,8 @@ window.addEventListener('DOMContentLoaded',function(){
                 whiteW.style.transform = "translateY(-"+upMove+"px)";
                 blackW.style.transform = "translateY(-"+upMove+"px)";
                 indiBox.style.transform = "translateY(-"+indiMove+"px)";
-
+                
             }
-
             
         });
         prev.addEventListener('click',funPrev);
@@ -57,7 +59,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
             function funNext(e){
                 e.preventDefault();
-                console.log(slideW);
+                
                 move += slideW;
                 upMove += whiteT;
                 indiMove += indiT;
@@ -69,7 +71,7 @@ window.addEventListener('DOMContentLoaded',function(){
     
             function funPrev(e){
                 e.preventDefault();
-                console.log(slideW);
+                
                 move -= slideW;
                 upMove -= whiteT;
                 indiMove -= indiT;
@@ -248,7 +250,7 @@ worksPop.addEventListener('scroll',workScroll);
 
 function workScroll(){
     var scrollYY = $('.works').scrollTop();
-    console.log(scrollYY);
+    
         for(var i=0;i<workItem.length;i++){
            
             if(scrollYY > workItem[i].offsetTop - window.innerHeight){
@@ -263,6 +265,24 @@ function workScroll(){
 
     
 }
+
+// --------work상세로 넘어가기----------
+
+var workDetail = document.querySelectorAll('.work-item h2');
+
+for(var i=0;i<workDetail.length;i++){
+    workDetail[i].addEventListener('click',funDetail);
+   
+}
+
+    function funDetail(e){
+        e.preventDefault();
+        
+        for(var i=0;i<workDetail.length;i++){
+            localStorage.pol = workDetail[i].dataset.num;
+        }
+    }
+
 
 
 
@@ -291,7 +311,7 @@ function aboutScroll(e){
     var homeTop = home.offsetTop;
 
     var scrollY = $('.About-me').scrollTop();
-        console.log(scrollY);
+        
     
         if(scrollY +969 >= jsTop + winH){
             jsIcon.classList.add('active'); 
@@ -354,21 +374,27 @@ var winH = window.innerHeight/5;
         var snsTop = snsAdrs.offsetTop;
         var scrollY = $('.contact-me').scrollTop();
 
-        if(scrollY +969 >= cListArr[0] + winH){
+        if(scrollY >= cListArr[0] + winH - 969){
             cName.classList.add('active');
             cLocation.classList.add('active');
         }
-        if(scrollY +969 >= cListArr[1] + winH + 200){
+        if(scrollY >= cListArr[1] + winH + 200 - 969){
             cBirth.classList.add('active');
             cEmail.classList.add('active');
         }
-        if(scrollY +969 >= cListArr[2] + winH +100){
+        if(scrollY >= cListArr[2] + winH +100 - 969){
             cAdress.classList.add('active');
             cPhone.classList.add('active');
         }
-        if(scrollY + 969 >= snsTop + winH){
+        if(scrollY >= snsTop + winH - 1069){
             snsAdrs.classList.add('active');
         }
 });
+
+
+
+
+
+
 
 });

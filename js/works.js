@@ -1,5 +1,36 @@
 window.addEventListener('DOMContentLoaded',function(){
+    localStorage.pol = 0;
+    //  ------JSON------
+    var data = new XMLHttpRequest();
+    var subTit = document.querySelector('.sub_visual_txt');
+    
+    data.open('GET','json/work.json',true);
+    data.send(null);
 
+    data.addEventListener('load', dataFun);
+
+    function dataFun(){
+        var response;
+        var titEle = '';
+        var dNum = localStorage.pol;
+
+        response = JSON.parse(data.responseText);
+        subTit.innerHTML = '';
+
+        response.product.forEach(function(el,key){
+            if(dNum == key){
+                titEle = "<h2>"+el.title+"</h2>";
+
+                subTit.innerHTML = titEle;
+
+            }
+        });
+
+    }
+
+
+
+//  -----work.html기능들-----
     var nameTit = document.querySelector('.view_tit_area .name_tit');
     var launch = document.querySelector('.container .view_tit_area a');
     var info = document.querySelector('.view_info');
@@ -13,7 +44,7 @@ window.addEventListener('DOMContentLoaded',function(){
     window.addEventListener('scroll',funScroll);
 
     function funScroll(){
-        console.log(nameTit.offsetTop - winH);
+
         if(scrollY > nameTit.offsetTop - winH){
             nameTit.classList.add("active")
         }if(scrollY == 0){
@@ -80,3 +111,13 @@ window.addEventListener('DOMContentLoaded',function(){
 
 
 });
+
+
+
+
+
+
+
+
+
+
