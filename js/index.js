@@ -94,7 +94,8 @@ window.addEventListener('DOMContentLoaded',function(){
     var popImg2 = document.querySelector('.a-title img');
     var popImg3 = document.querySelector('.c-title img');
     var nextAbout = document.querySelector('.works .nextP');
-
+    var nextContact = document.querySelector('.About-me .nextP');
+    var nextWorks = document.querySelector('.contact-me .nextP');
 
     
     for(var i=0;i<whiteWEl.length;i++){
@@ -119,7 +120,46 @@ window.addEventListener('DOMContentLoaded',function(){
 
         bgPop.classList.add('active');
 
+        localStorage.works = "true";
+
     }
+    //contact에서 넥스트 눌렀을때
+
+    nextWorks.addEventListener('click',nextPWorks);
+    function nextPWorks(e){
+        e.preventDefault();
+
+        $('.works').show();
+
+        setTimeout(function(){ 
+            worksPop.classList.add('active')
+            popup1.classList.add('active');
+        },10);
+        setTimeout(function(){ 
+            popImg1.classList.add('active');
+        },1000);
+
+        bgPop.classList.add('active');
+
+        localStorage.works = "true";
+
+        contactPop.scrollTo(0,0);
+        contactPop.classList.remove('active');
+        popup3.classList.remove('active');
+        bgPop.classList.remove('active');
+        popImg3.classList.remove('active');
+
+        cName.classList.remove('active');
+        cLocation.classList.remove('active');
+        cBirth.classList.remove('active');
+        cEmail.classList.remove('active');
+        cAdress.classList.remove('active');
+        cPhone.classList.remove('active');
+        snsAdrs.classList.remove('active');
+        $('.contact-me').hide();
+    }
+
+
     //about me
     
     function funTab2(e){
@@ -180,6 +220,43 @@ window.addEventListener('DOMContentLoaded',function(){
         bgPop.classList.add('active');
     }
 
+    //About-me에서 next눌렀을때
+
+    nextContact.addEventListener('click',nextPContact);
+    function nextPContact(e){
+        e.preventDefault();
+
+        $('.contact-me').show();
+
+        setTimeout(function(){ 
+            contactPop.classList.add('active')
+            popup3.classList.add('active');
+        },10);
+        setTimeout(function(){ 
+            popImg3.classList.add('active');
+        },1000);
+
+        bgPop.classList.add('active');
+
+        
+        aboutPop.scrollTo(0,0);
+        aboutPop.classList.remove('active');
+        popup2.classList.remove('active');
+        bg2Pop.classList.remove('active');
+        popImg2.classList.remove('active');
+
+        jsIcon.classList.remove('active'); 
+        nameTit.classList.remove('active');
+        subTit.classList.remove('active');
+        subList.classList.remove('active');
+        myInfo.classList.remove('active');
+        graph.classList.remove('active');
+        skillTxt.classList.remove('active');
+        home.classList.remove('active');
+        $('.About-me').hide();
+    }
+
+
 // X누르면 팝업내려가게
     var burgerX1 = document.querySelector('.works .burger');
     var burgerX2 = document.querySelector('.About-me .burger');
@@ -201,7 +278,7 @@ window.addEventListener('DOMContentLoaded',function(){
         for(var i=0;i<workItem.length;i++){
             workItem[i].classList.remove('active');
         }
-        
+        localStorage.works = 'false';
         $('.works').hide();
     }
     function funburgerX2(e){
@@ -279,14 +356,13 @@ var workDetail = document.querySelectorAll('.work-item h2');
         event.preventDefault();
         var idx = this.dataset.num;
         
-        localStorage.works = true;
+        localStorage.works = 'true';
         localStorage.pol = workDetail[idx].dataset.num;
         location.href = workDetail[idx].dataset.url;
     }
 
-    if(localStorage.works == true){
-        $('.works').show();
-
+    if(localStorage.works == 'true'){
+        $('.works').show().css("opacity","1");
         setTimeout(function(){ 
             worksPop.classList.add('active')
             popup1.classList.add('active');
@@ -296,6 +372,10 @@ var workDetail = document.querySelectorAll('.work-item h2');
         },1000);
 
         bgPop.classList.add('active');
+    }
+
+    if(localStorage.works == 'false'){
+        $('.works').hide();
     }
 
 
