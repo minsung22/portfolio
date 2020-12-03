@@ -9,6 +9,7 @@
             "macImg":"img/view_main18.png"
         },
         {
+            "subVisual":"/img/soodammain.jpg",
             "title":"Pizzahut",
             "year":["Pizzahut","PC","2020. 09 ~ 2020. 10","Chrome","HTML css jsp Jquery"],
             "font01":"nanumgothic",
@@ -16,6 +17,7 @@
             "macImg":"img/view_main18.png"
         },
         {
+            "subVisual":"/img/soodammain.jpg",
             "title":"Portfolio",
             "year":["Portfolio","PC","2020. 11 ~ 2020. 11","Chrome","HTML css jsp Jquery"],
             "font01":"nanumgothic",

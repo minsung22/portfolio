@@ -4,7 +4,8 @@ window.addEventListener('DOMContentLoaded',function(){
     //  ------JSON------
     var data = new XMLHttpRequest();
     var subTit = document.querySelector('.sub_visual_txt');
-    
+    var subV = document.querySelector('#sub_visual');
+
     data.open('GET','json/work.json',true);
     data.send(null);
 
@@ -13,6 +14,7 @@ window.addEventListener('DOMContentLoaded',function(){
     function dataFun(){
         var response;
         var titEle = '';
+        var subVEle = '';
         var dNum = localStorage.pol;
 
         response = JSON.parse(data.responseText);
@@ -20,16 +22,17 @@ window.addEventListener('DOMContentLoaded',function(){
 
         response.product.forEach(function(el,key){
             if(dNum == key){
-                titEle = "<h2>"+el.title+"</h2>";
+                subVEle = "<li><p style=background:url("+el.subVisual+")center;background-size:cover;></p></li>"
+                subV.innerHTML = subVEle;
 
+                titEle = "<h2>"+el.title+"</h2>";
                 subTit.innerHTML = titEle;
+
+
 
             }
         });
-
     }
-
-
 
 //  -----work.html기능들-----
     var nameTit = document.querySelector('.view_tit_area .name_tit');
