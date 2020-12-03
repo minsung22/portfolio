@@ -1,6 +1,7 @@
 {
     "product":[
-        {
+        {   
+            "subVisual":"/img/soodammain.jpg",
             "title":"SOODAM",
             "year":["Soodam","PC","2020. 07 ~ 2020. 08","Chrome","HTML css jsp Jquery"],
             "font01":"nanumgothic",

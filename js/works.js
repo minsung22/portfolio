@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded',function(){
-    localStorage.pol = 0;
+    
+    
     //  ------JSON------
     var data = new XMLHttpRequest();
     var subTit = document.querySelector('.sub_visual_txt');

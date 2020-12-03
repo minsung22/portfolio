@@ -270,20 +270,33 @@ function workScroll(){
 
 var workDetail = document.querySelectorAll('.work-item h2');
 
-for(var i=0;i<workDetail.length;i++){
-    workDetail[i].addEventListener('click',funDetail);
-   
-}
-
-    function funDetail(e){
-        e.preventDefault();
-        
-        for(var i=0;i<workDetail.length;i++){
-            localStorage.pol = workDetail[i].dataset.num;
-        }
+    for(var i=0;i<workDetail.length;i++){
+        workDetail[i].addEventListener('click',funDetail);
     }
 
+    
+    function funDetail(){
+        event.preventDefault();
+        var idx = this.dataset.num;
+        
+        localStorage.works = true;
+        localStorage.pol = workDetail[idx].dataset.num;
+        location.href = workDetail[idx].dataset.url;
+    }
 
+    if(localStorage.works == true){
+        $('.works').show();
+
+        setTimeout(function(){ 
+            worksPop.classList.add('active')
+            popup1.classList.add('active');
+        },10);
+        setTimeout(function(){ 
+            popImg1.classList.add('active');
+        },1000);
+
+        bgPop.classList.add('active');
+    }
 
 
 
