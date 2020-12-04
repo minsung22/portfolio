@@ -20,6 +20,31 @@ window.addEventListener('DOMContentLoaded',function(){
     var slideW = slide[0].offsetWidth + slide[0].offsetLeft;
     var whiteT = whiteWEl[0].offsetHeight + whiteWEl[0].offsetTop;
     var indiT = indi[0].offsetHeight + indi[0].offsetTop;
+
+
+
+
+
+
+//버거메뉴클릭
+    var burgermenu = document.querySelector('.header a');
+    var burgermenu2 = document.querySelector('.header2 a');
+    var burgermenu3 = document.querySelector('.header3 a');
+    var burgermenu4 = document.querySelector('.header4 a');
+
+    burgermenu.addEventListener('click',function(){
+        $('.header a').toggleClass('active');
+    })
+    burgermenu2.addEventListener('click',function(){
+        $('.header2 a').toggleClass('active');
+    })
+    burgermenu3.addEventListener('click',function(){
+        $('.header3 a').toggleClass('active');
+    })
+    burgermenu4.addEventListener('click',function(){
+        $('.header4 a').toggleClass('active');
+    })
+
 //슬라이드 
 
         var aa;
@@ -245,7 +270,7 @@ window.addEventListener('DOMContentLoaded',function(){
         bg2Pop.classList.remove('active');
         popImg2.classList.remove('active');
 
-        jsIcon.classList.remove('active'); 
+        jsIcon.classList.remove('active');
         nameTit.classList.remove('active');
         subTit.classList.remove('active');
         subList.classList.remove('active');

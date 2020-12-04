@@ -47,6 +47,16 @@
     bottom:0;
     left:0;
 }
+.header a.active span:nth-of-type(1){
+    transform:translateY(10px) rotate(45deg) ; 
+}
+.header a.active span:nth-of-type(2){
+    opacity:0;
+}
+.header a.active span:nth-of-type(3){
+    transform:translateY(-10px) rotate(-45deg) ;
+} 
+
 .header .side div{
     margin-left:20px;
 }
@@ -292,6 +302,15 @@ li{display:inline-block;}
     bottom:0;
     left:0;
 }
+.header2 a.active span:nth-of-type(1){
+    transform:translateY(10px) rotate(45deg) ; 
+}
+.header2 a.active span:nth-of-type(2){
+    opacity:0;
+}
+.header2 a.active span:nth-of-type(3){
+    transform:translateY(-10px) rotate(-45deg) ;
+} 
 .header2 .side div{
     margin-left:20px;
 }
@@ -505,6 +524,15 @@ li{display:inline-block;}
     bottom:0;
     left:0;
 }
+.header3 a.active span:nth-of-type(1){
+    transform:translateY(10px) rotate(45deg) ; 
+}
+.header3 a.active span:nth-of-type(2){
+    opacity:0;
+}
+.header3 a.active span:nth-of-type(3){
+    transform:translateY(-10px) rotate(-45deg) ;
+} 
 .header3 .side div{
     margin-left:20px;
 }
@@ -797,19 +825,19 @@ label.invisible{*position:Absolute;}
 .popupB.active{
     opacity:1;
 }
-.contact-me .header3{
+.contact-me .header4{
     display:flex; justify-content: space-between; width:100%;
     align-items: flex-start; flex-wrap: wrap; 
     padding:4.5rem 5rem 0 5rem;
     z-index:99;
 }
-.contact-me .header3 a{
+.contact-me .header4 a{
     display:inline-block;
     width:25px;
     height:20px;
     position:relative;
 }
-.contact-me .header3 a span:nth-of-type(1){
+.contact-me .header4 a span:nth-of-type(1){
     display:inline-block;
     width:100%;
     height:1px;
@@ -819,7 +847,7 @@ label.invisible{*position:Absolute;}
     top:0;
     left:0;
 }
-.contact-me .header3 a span:nth-of-type(2){
+.contact-me .header4 a span:nth-of-type(2){
     display:inline-block;
     width:100%;
     height:1px;
@@ -829,7 +857,7 @@ label.invisible{*position:Absolute;}
     top:50%;
     left:0;
 }
-.contact-me .header3 a span:nth-of-type(3){
+.contact-me .header4 a span:nth-of-type(3){
     display:inline-block;
     width:100%;
     height:1px;
@@ -839,22 +867,31 @@ label.invisible{*position:Absolute;}
     bottom:0;
     left:0;
 }
-.contact-me .header3 .side div{
+.header4 a.active span:nth-of-type(1){
+    transform:translateY(10px) rotate(45deg) ; 
+}
+.header4 a.active span:nth-of-type(2){
+    opacity:0;
+}
+.header4 a.active span:nth-of-type(3){
+    transform:translateY(-10px) rotate(-45deg) ;
+} 
+.contact-me .header4 .side div{
     margin-left:20px;
 }
-.contact-me .header3 .side div a{
+.contact-me .header4 .side div a{
     cursor: pointer;
 }
-.contact-me .header3 h1{
+.contact-me .header4 h1{
     margin-right:65px;
     font-size:2em;
 }
-.contact-me .header3 div span{
+.contact-me .header4 div span{
     font-family: 'Stalinist One', cursive;
     font-size:12px;
     color:black;
 }
-.contact-me .header3{
+.contact-me .header4{
     padding-bottom:0;
 }
 .c-title{
