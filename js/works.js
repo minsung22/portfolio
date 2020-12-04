@@ -9,9 +9,12 @@ window.addEventListener('DOMContentLoaded',function(){
     data.open('GET','json/work.json',true);
     data.send(null);
 
-    $('.loading').addClass('active');
+    $('.loading').fadeIn();
     data.addEventListener('load', dataFun);
-    $('.loading').removeClass('active');
+    setTimeout(function(){
+        $('.loading').fadeOut();
+    },2000);
+    
     function dataFun(){
         var response;
         var titEle = '';
