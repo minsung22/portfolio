@@ -1,24 +1,15 @@
-$.ajax({
-
-    type:"GET"
-
-   ,url: "index.html"
-
-   ,data:{a:10}
-
-   ,success:function(){}
-   ,beforeSend:function(){
-       $('.loading').addClass('active');
-   }
-   ,complete:function(){
-       $('.loading').removeClass('active');
-   }
-   ,error:function(e){}
-   ,timeout:100000 
-});
 
 
+ 
 window.addEventListener('DOMContentLoaded',function(){
+    var data = new XMLHttpRequest();
+
+    $('.loading').show();
+    
+    setTimeout(function(){
+        $('.loading').fadeOut();
+    },2000);
+
     var contents = document.querySelector('.contents');
     var slideInner = document.querySelector('.slider-inner');
     var slide = document.querySelectorAll('.slide');
@@ -493,7 +484,7 @@ function aboutScroll(e){
         
     
         if(scrollY +969 >= jsTop + winH){
-            jsIcon.classList.add('active'); 
+            jsIcon.classList.add('active');
         }
         if(scrollY + 969 >= nameTop + winH){
             nameTit.classList.add('active');
