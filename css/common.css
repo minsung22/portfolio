@@ -52,3 +52,27 @@ img{
     width:50%;
 }
 .cb{color:#000;}
+
+.loading{
+    z-index:99999999;
+    display:none;
+}
+.loading div{
+    color:white;
+    width:100%;
+    height:100%;
+    text-align:center;
+    font-family:'Gugi', cursive;
+    font-size:3vw;
+    padding-top:22%;
+    
+}
+.loading.active{
+    display:block;
+}
+.cW{
+    color:white !important;   
+}
+.cB{
+    color:black !important;   
+}

@@ -9,8 +9,9 @@ window.addEventListener('DOMContentLoaded',function(){
     data.open('GET','json/work.json',true);
     data.send(null);
 
+    $('.loading').addClass('active');
     data.addEventListener('load', dataFun);
-
+    $('.loading').removeClass('active');
     function dataFun(){
         var response;
         var titEle = '';
